@@ -1,0 +1,47 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.9", "3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest discover -s . -p "test_*.py" -v
+
+  action:
+    # Run the action itself against the inert demo extensions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - run: python3 examples/make_demo.py
+      - name: Clean extension passes
+        uses: ./
+        with:
+          vsix: demo-clean.vsix
+      - name: Backdoored extension is reported
+        uses: ./
+        with:
+          vsix: demo-backdoored.vsix
+          fail-on: never
+          sarif: extwatch.sarif
+      - name: Check the report
+        run: |
+          python3 - <<'PY'
+          import json
+          results = json.load(open("extwatch.sarif"))["runs"][0]["results"]
+          ids = {r["ruleId"] for r in results}
+          print(len(results), "findings:", sorted(ids))
+          assert {"EW001", "EW002", "EW003", "EW007"} <= ids
+          PY
