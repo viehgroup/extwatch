@@ -1,0 +1,87 @@
+# id<TAB>display name. Used to spot lookalikes.
+ms-python.python	Python
+ms-python.vscode-pylance	Pylance
+ms-python.debugpy	Python Debugger
+ms-toolsai.jupyter	Jupyter
+esbenp.prettier-vscode	Prettier - Code formatter
+dbaeumer.vscode-eslint	ESLint
+ms-vscode.cpptools	C/C++
+ms-vscode.cmake-tools	CMake Tools
+eamodio.gitlens	GitLens
+ms-azuretools.vscode-docker	Docker
+github.copilot	GitHub Copilot
+github.copilot-chat	GitHub Copilot Chat
+github.vscode-pull-request-github	GitHub Pull Requests
+github.vscode-github-actions	GitHub Actions
+redhat.vscode-yaml	YAML
+redhat.java	Language Support for Java(TM) by Red Hat
+vscjava.vscode-java-pack	Extension Pack for Java
+ms-dotnettools.csharp	C#
+ms-dotnettools.csdevkit	C# Dev Kit
+golang.go	Go
+rust-lang.rust-analyzer	rust-analyzer
+ritwickdey.liveserver	Live Server
+ms-vscode-remote.remote-ssh	Remote - SSH
+ms-vscode-remote.remote-containers	Dev Containers
+ms-vscode-remote.remote-wsl	WSL
+ms-vsliveshare.vsliveshare	Live Share
+formulahendry.code-runner	Code Runner
+pkief.material-icon-theme	Material Icon Theme
+anthropic.claude-code	Claude Code for VS Code
+saoudrizwan.claude-dev	Cline
+continue.continue	Continue
+openai.chatgpt	Codex
+google.geminicodeassist	Gemini Code Assist
+sourcegraph.cody-ai	Cody
+tabnine.tabnine-vscode	Tabnine
+codeium.codeium	Windsurf Plugin
+supermaven.supermaven	Supermaven
+bradlc.vscode-tailwindcss	Tailwind CSS IntelliSense
+vue.volar	Vue - Official
+svelte.svelte-vscode	Svelte for VS Code
+astro-build.astro-vscode	Astro
+angular.ng-template	Angular Language Service
+denoland.vscode-deno	Deno
+biomejs.biome	Biome
+prisma.prisma	Prisma
+hashicorp.terraform	HashiCorp Terraform
+ms-kubernetes-tools.vscode-kubernetes-tools	Kubernetes
+streetsidesoftware.code-spell-checker	Code Spell Checker
+usernamehw.errorlens	Error Lens
+christian-kohler.path-intellisense	Path Intellisense
+mhutchie.git-graph	Git Graph
+donjayamanne.githistory	Git History
+humao.rest-client	REST Client
+rangav.vscode-thunder-client	Thunder Client
+dart-code.dart-code	Dart
+dart-code.flutter	Flutter
+charliermarsh.ruff	Ruff
+ms-python.black-formatter	Black Formatter
+yzhang.markdown-all-in-one	Markdown All in One
+davidanson.vscode-markdownlint	markdownlint
+editorconfig.editorconfig	EditorConfig for VS Code
+ms-vscode.powershell	PowerShell
+amazonwebservices.aws-toolkit-vscode	AWS Toolkit
+sonarsource.sonarlint-vscode	SonarQube for IDE
+snyk-security.snyk-vulnerability-scanner	Snyk Security
+gitlab.gitlab-workflow	GitLab Workflow
+ms-playwright.playwright	Playwright Test for VSCode
+vscodevim.vim	Vim
+dracula-theme.theme-dracula	Dracula Theme
+zhuangtongfa.material-theme	One Dark Pro
+github.github-vscode-theme	GitHub Theme
+mechatroner.rainbow-csv	Rainbow CSV
+gruntfuggly.todo-tree	Todo Tree
+alefragnani.bookmarks	Bookmarks
+alefragnani.project-manager	Project Manager
+formulahendry.auto-rename-tag	Auto Rename Tag
+dsznajder.es7-react-js-snippets	ES7+ React/Redux/React-Native snippets
+wix.vscode-import-cost	Import Cost
+ms-mssql.mssql	SQL Server (mssql)
+mtxr.sqltools	SQLTools
+tomoki1207.pdf	vscode-pdf
+oderwat.indent-rainbow	indent-rainbow
+visualstudioexptteam.vscodeintellicode	IntelliCode
+ms-vscode.live-server	Live Preview
+redhat.vscode-xml	XML
+ms-azuretools.vscode-bicep	Bicep
