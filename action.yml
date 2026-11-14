@@ -1,0 +1,35 @@
+name: extwatch
+description: Scan a built VS Code extension (.vsix) for backdoors before you publish it
+author: VIEH Security Team
+branding:
+  icon: shield
+  color: red
+
+inputs:
+  vsix:
+    description: Path to the .vsix file (or extension folder) to scan
+    required: true
+  fail-on:
+    description: Fail the job at this severity or above (high, medium, low, never)
+    default: high
+  sarif:
+    description: Optional path to also write a SARIF report
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Scan extension
+      shell: bash
+      env:
+        EW_VSIX: ${{ inputs.vsix }}
+        EW_FAIL_ON: ${{ inputs.fail-on }}
+        EW_SARIF: ${{ inputs.sarif }}
+        PYTHONPATH: ${{ github.action_path }}
+      run: |
+        # No dependencies, so no install step: run straight from the action checkout.
+        python3 -m extwatch "$EW_VSIX" --format github --fail-on never
+        if [ -n "$EW_SARIF" ]; then
+          python3 -m extwatch "$EW_VSIX" --format sarif -o "$EW_SARIF" --fail-on never
+        fi
+        python3 -m extwatch "$EW_VSIX" --no-color --fail-on "$EW_FAIL_ON"

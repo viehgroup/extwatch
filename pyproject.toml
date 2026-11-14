@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "extwatch"
+version = "0.1.0"
+description = "Catch backdoored VS Code, Cursor and Windsurf extensions"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "VIEH Security Team" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["security", "vscode", "cursor", "windsurf", "extensions", "supply-chain", "malware", "backdoor"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+    "Environment :: Console",
+]
+
+[project.scripts]
+extwatch = "extwatch.cli:main"
+
+[tool.setuptools]
+packages = ["extwatch", "extwatch.data"]
+
+[tool.setuptools.package-data]
+"extwatch.data" = ["*.json", "*.txt"]
